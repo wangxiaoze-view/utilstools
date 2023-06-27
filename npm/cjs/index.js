@@ -1,8 +1,2 @@
-'use strict';
-
-function add(a, b) {
-  return a + b;
-}
-
-exports.add = add;
+"use strict";exports.add=function(t,r){return t+r};
 //# sourceMappingURL=index.js.map

@@ -1,14 +1,2 @@
-(function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
-    typeof define === 'function' && define.amd ? define(['exports'], factory) :
-    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.webUtils = {}));
-})(this, (function (exports) { 'use strict';
-
-    function add(a, b) {
-      return a + b;
-    }
-
-    exports.add = add;
-
-}));
+!function(e,t){"object"==typeof exports&&"undefined"!=typeof module?t(exports):"function"==typeof define&&define.amd?define(["exports"],t):t((e="undefined"!=typeof globalThis?globalThis:e||self).webUtils={})}(this,(function(e){"use strict";e.add=function(e,t){return e+t}}));
 //# sourceMappingURL=index.js.map

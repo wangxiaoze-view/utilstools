@@ -1,10 +1,2 @@
-define(['exports'], (function (exports) { 'use strict';
-
-    function add(a, b) {
-      return a + b;
-    }
-
-    exports.add = add;
-
-}));
+define(["exports"],(function(n){"use strict";n.add=function(n,t){return n+t}}));
 //# sourceMappingURL=index.js.map

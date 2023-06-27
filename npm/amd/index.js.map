@@ -1,1 +1,1 @@
-{"version":3,"file":"index.js","sources":["../../src/math/add.js"],"sourcesContent":["function add(a, b) {\n    return a + b;\n}\n\nexport default add;"],"names":["add","a","b"],"mappings":";;IAAA,SAASA,GAAGA,CAACC,CAAC,EAAEC,CAAC,EAAE;MACf,OAAOD,CAAC,GAAGC,CAAC,CAAA;IAChB;;;;;;;;"}
+{"version":3,"file":"index.js","sources":["../../src/math/add.js"],"sourcesContent":["function add(a, b) {\n    return a + b;\n}\n\nexport default add;"],"names":["a","b"],"mappings":"mDAAA,SAAaA,EAAGC,GACZ,OAAOD,EAAIC,CACf"}
