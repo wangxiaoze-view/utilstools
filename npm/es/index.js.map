@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sources":["../../src/math/add.js"],"sourcesContent":["function add(a, b) {\n    return a + b;\n}\n\nexport default add;"],"names":["add","a","b"],"mappings":"AAAA,SAASA,GAAGA,CAACC,CAAC,EAAEC,CAAC,EAAE;EACf,OAAOD,CAAC,GAAGC,CAAC,CAAA;AAChB;;;;"}
