@@ -1,3 +1,9 @@
+import commonjs from '@rollup/plugin-commonjs'
+import {babel} from '@rollup/plugin-babel';
+import {nodeResolve} from '@rollup/plugin-node-resolve';
+import externals from "rollup-plugin-node-externals";
+import strip from "@rollup/plugin-strip";
+
 const isDev = process.env.NODE_ENV === 'development';
 
 export default {
@@ -27,5 +33,15 @@ export default {
             file: isDev ? 'npm/umd/index.js': 'npm/umd/index.min.js',
             sourcemap: true,
         }
-    ]
+    ],
+    plugins: [
+        externals({
+            devDeps: false,
+        }),
+        nodeResolve(),
+        commonjs(),
+        babel(),
+        strip(),
+    ],
+    external: []
 }
