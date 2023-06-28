@@ -1,6 +1,6 @@
 {
   "name": "web-utils-js",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": false,
   "type": "module",
   "description": "",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://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@github.com/wangxiaoze-view/web-utils.git"
+    "url": "git+https://github.com/wangxiaoze-view/web-utils"
   },
   "author": "",
   "license": "ISC",

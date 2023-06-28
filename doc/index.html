@@ -1,10 +1,26 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
 </head>
-<body>
-$END$
-</body>
+<body></body>
+<script src="../npm/umd/index.js"></script>
+<script>
+    console.log(webUtils);
+    console.log('加', webUtils.add(1, 2));
+    console.log('减', webUtils.subtract(1, 2));
+    console.log('乘', webUtils.multi(1, 2));
+    console.log('除', webUtils.division(1, 2));
+    console.log('最大值', webUtils.max(1, 2));
+    console.log('最小值', webUtils.min(1, 2));
+    console.log('和', webUtils.sum(1, 2, 3));
+</script>
+
+<script>
+    console.log('====')
+</script>
 </html>
