@@ -4,9 +4,9 @@
   "private": false,
   "description": "",
   "type": "module",
-  "main": "npm/index.js",
-  "module": "npm/es/index.js",
-  "browser": "npm/umd/index.js",
+  "main": "npm/index.main.js",
+  "module": "npm/es/index.main.js",
+  "browser": "npm/umd/index.main.js",
   "sideEffects": false,
   "scripts": {
     "build": "rimraf npm && rollup -c  --environment NODE_ENV:production",
