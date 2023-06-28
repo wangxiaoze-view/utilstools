@@ -1,5 +1,5 @@
 import isSymbol from "./isSymbol.js";
-import {Sym_pro_toString} from "./getTypes.js";
+import {sym_pro_toString} from "./getTypes.js";
 
 /**
  * @description 转字符串
@@ -9,7 +9,7 @@ import {Sym_pro_toString} from "./getTypes.js";
 function baseToString(value) {
     if (typeof value === 'string') return value;
     if (Array.isArray(value)) return value.map(baseToString).toString();
-    if (isSymbol(value)) return Sym_pro_toString.call(value) || '';
+    if (isSymbol(value)) return sym_pro_toString.call(value) || '';
     const result = `${value}`;
     return result === 'Infinity' ? 0 : result
 }
