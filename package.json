@@ -1,12 +1,12 @@
 {
   "name": "web-utils-js",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "private": false,
   "description": "",
   "type": "module",
-  "main": "npm/index.main.js",
-  "module": "npm/es/index.main.js",
-  "browser": "npm/umd/index.main.js",
+  "main": "npm/index.js",
+  "module": "npm/es/index.js",
+  "browser": "npm/umd/index.js",
   "sideEffects": false,
   "scripts": {
     "build": "rimraf npm && rollup -c  --environment NODE_ENV:production",
