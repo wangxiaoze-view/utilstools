@@ -23,7 +23,7 @@ console.log('最小值', webUtils.min(1, 2));
 console.log('和', webUtils.sum(1, 2, 3));
 ```
 
-### node中使用
+### 2️⃣：node中使用
 使用命令: `npm i web-utils-js`
 
 ```js
@@ -39,7 +39,23 @@ console.log(webUtils.add(1, 2))
 > - [x] 代表已完成 
 > - [ ] 未完成
 
-- [x] math算法，俩数加减乘法，最大值，最小值，数组之和；
+- [x] math算法
+  - [x] 俩数加减乘法，最大值，最小值，数组之和；
 - [ ] 数组
 - [ ] 字符串
-- [ ] 常用正则
+- [x] 常用正则
+  - [x] 手机号校验，最宽松模式`isPhoneLoosest(value)`
+  - [x] 手机号校验，宽松模式 `isPhoneLoose(value)`
+  - [x] 手机号校验，严谨模式 `isPhone(value)`
+  - [x] 电子邮箱 `isEmail(value)`
+  - [x] 是否为座机`isLandline(value)`
+  - [x] 是否为身份证; 身份证号, 支持1/2代(15位/18位数字)`isCard(value)`
+  - [x] 是否为中文、汉字`isChinese(value)`
+  - [x] 是否是纯数字 `isNumber(value)`
+  - [x] html标签(宽松匹配)`isHtmlTag(value)`
+  - [x] 数字和字母组成 `isCharAndNum(value)`
+  - [x] 小写英文字母 `isLoChar(value)`
+  - [x] 大写英文字母 `isUpChar(value)`
+  - [x] 正整数，不包含0 `isPositiveInt(value)`
+  - [x] 负整数，不包含0 `isNegativeInt(value)`
+  - [x] 浮点数 `isFloor(value)`

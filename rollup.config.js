@@ -8,6 +8,7 @@ import beep from '@rollup/plugin-beep'
 import run from '@rollup/plugin-run';
 import json from '@rollup/plugin-json';
 import terser from '@rollup/plugin-terser';
+import uglify from "rollup-plugin-uglify";
 
 const isDev = process.env.NODE_ENV === 'development';
 
@@ -40,6 +41,7 @@ export default {
         }
     ],
     plugins: [
+        !isDev && uglify.uglify(),
         externals({
             devDeps: false,
         }),
@@ -50,7 +52,7 @@ export default {
         strip(),
         beep(),
         run(),
-        terser({
+        !isDev && terser({
             //指示插件使用特定数量的cpu线程。
             maxWorkers: 4
         }),

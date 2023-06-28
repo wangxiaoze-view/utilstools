@@ -1,9 +1,9 @@
 {
   "name": "web-utils-js",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "private": false,
-  "type": "module",
   "description": "",
+  "type": "module",
   "main": "npm/index.js",
   "module": "npm/es/index.js",
   "browser": "npm/umd/index.js",
@@ -24,7 +24,8 @@
   "homepage": "https://github.com/wangxiaoze-view/web-utils#readme",
   "dependencies": {
     "rimraf": "^5.0.1",
-    "rollup": "^3.25.3"
+    "rollup": "^3.25.3",
+    "rollup-plugin-uglify": "^6.0.4"
   },
   "devDependencies": {
     "@babel/core": "^7.22.5",

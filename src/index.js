@@ -12,3 +12,22 @@ export {default as max} from './math/max.js'
 export {default as min} from './math/min.js'
 // 数组之和。
 export {default as sum} from './math/sum.js'
+
+// 正则大全
+export {
+    isPhoneLoosest,
+    isPhoneLoose,
+    isPhone,
+    isEmail,
+    isLandline,
+    isCard,
+    isChinese,
+    isNumber,
+    isHtmlTag,
+    isUpChar,
+    isLoChar,
+    isCharAndNum,
+    isPositiveInt,
+    isNegativeInt,
+    isFloor,
+} from './regular/index.js'
