@@ -1,8 +1,8 @@
 {
   "name": "web-utils-js",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "private": false,
-  "description": "",
+  "description": "基础的前端库，常用的数学算法，正则校验，数组字符串等...",
   "type": "module",
   "main": "npm/index.js",
   "module": "npm/es/index.js",

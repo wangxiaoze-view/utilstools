@@ -41,8 +41,10 @@ console.log(webUtils.add(1, 2))
 
 - [x] math算法
   - [x] 俩数加减乘法，最大值，最小值，数组之和；
-- [ ] 数组
 - [ ] 字符串
+- [x] 数组
+  - [x] 数组循环 `each(arr, callback)`
+  - [x] 数组、对象过滤， `filter(data, callback)` 返回的是数组格式
 - [x] 常用正则
   - [x] 手机号校验，最宽松模式`isPhoneLoosest(value)`
   - [x] 手机号校验，宽松模式 `isPhoneLoose(value)`
