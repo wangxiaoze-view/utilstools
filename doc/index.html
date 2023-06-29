@@ -38,6 +38,30 @@
     console.log(webUtils.filter({name: 'a', age: 12, name2: 'b', age2: 30}, {name2: 'b', age: 12}))
     console.log(webUtils.filter({name: 'a', age: 12, name2: 'b', age2: 30}, {name: 'a'}))
 
+    // 查找
+    console.log('\n=========查找=========')
+    console.log(webUtils.find(users, (item) => item.age === 30))
+    console.log(webUtils.find({name: 'a', age: 12}, (key, value) => value === 30))
+    console.log(webUtils.find({name: 'a', age: 12}, (key, value) => value === 12))
+    console.log(webUtils.find({name: 'a', age: 12}, (key, value) => key === 'name'))
+
+    // 数组字符串的长度
+    console.log('\n=========数组字符串的长度=========')
+    console.log(webUtils.size([1, 2, 3]))
+    console.log(webUtils.size('123 123'))
+
+
+    // 字符串去除空格
+    console.log('\n=========字符串去除空格=========')
+    console.log(webUtils.trim('阿萨德 阿萨德撒点撒点 ' +
+        '谁的谁的阿萨德\n asd '))
+    console.log(webUtils.trim(undefined))
+
+    // 字符串切割
+    console.log('\n=========字符串字符串切割=========')
+    console.log(webUtils.split('a-b-c-d-e', '-', 3))
+    console.log(webUtils.split(null))
+
 
 </script>
 

@@ -13,6 +13,9 @@ export {default as baseArrEach} from './common/baseArrEach.js'
 export {default as baseObjEach} from './common/baseObjEach.js'
 export {default as filterArr} from './common/filterArr.js'
 export {default as filterObj} from './common/filterObj.js'
+export {default as findObj} from './common/findObj.js'
+export {default as findArr} from './common/findArr.js'
+export {default as size} from './common/size.js'
 
 // 数学
 // 俩数相加
@@ -33,6 +36,11 @@ export {default as sum} from './math/sum.js'
 // 数组
 export {default as each} from './array/each.js'
 export {default as filter} from './array/filter.js'
+export {default as find} from './array/find.js'
+
+// 字符串
+export {default as trim} from './string/trim.js'
+export {default as split} from './string/split.js'
 
 
 // 正则大全

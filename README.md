@@ -40,11 +40,18 @@ console.log(webUtils.add(1, 2))
 > - [ ] 未完成
 
 - [x] math算法
-  - [x] 俩数加减乘法，最大值，最小值，数组之和；
-- [ ] 字符串
+  - [x] 俩数加减乘法，
+  - [x] 最大值，最小值
+  - [x] 数组之和；
+- [x] 字符串
+  - [x] 去除空格 `trim(str)`
+  - [x] 切割为数组 `split(str, char, limit)` 切割的字符串，切割的字符，切割的数量
 - [x] 数组
   - [x] 数组循环 `each(arr, callback)`
   - [x] 数组、对象过滤， `filter(data, callback)` 返回的是数组格式
+  - [x] 数组对象查询 `find(data, callback)` 返回的是查询到的值
+- [ ] 时间转换
+- [ ] 常用函数，如防抖节流。克隆等
 - [x] 常用正则
   - [x] 手机号校验，最宽松模式`isPhoneLoosest(value)`
   - [x] 手机号校验，宽松模式 `isPhoneLoose(value)`
