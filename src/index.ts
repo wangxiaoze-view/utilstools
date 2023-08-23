@@ -2,7 +2,7 @@ import { version, author, description } from "../package.json";
 
 import regular from "./regular/index";
 import utils from "./util";
-import math from "./math";
+// import math from "./math";
 
 const __VERSION__ = version;
 const __AUTHOR__ = author;
@@ -29,7 +29,10 @@ const toString = utils.toString;
 const getSize = utils.getSize;
 const computedMath = utils.computedMath;
 
-const add = math.add;
+const add = computedMath((x: number, y: number) => x + y, 0);
+const subtract = computedMath((a: number, b: number) => a - b, 0);
+const multi = computedMath((x: number, y: number) => x * y, 0);
+const division = computedMath((x: number, y: number) => x / y, 0);
 export {
 	// 系统信息
 	__VERSION__,
@@ -61,4 +64,7 @@ export {
 
 	// 数学
 	add,
+	subtract,
+	multi,
+	division,
 };

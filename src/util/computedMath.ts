@@ -12,17 +12,16 @@
  * ```
  */
 import toNumber from "./toNumber";
-type FnParamsType = number | string | undefined | null;
 
 function computedMath(
 	fn: (x: number, y: number) => number,
 	defaultValue: number = 0
-): (x: FnParamsType, y: FnParamsType) => number {
-	return (x: FnParamsType, y: FnParamsType): number => {
+): (x: number, y: number) => number {
+	return (x: number, y: number): number => {
 		if (x === undefined && y === undefined) return defaultValue;
-		if (x !== undefined && y === undefined) return x as number;
-		if (x === undefined && y !== undefined) return y as number;
-		return fn(toNumber(x as string), toNumber(y as string));
+		if (x !== undefined && y === undefined) return toNumber(x);
+		if (x === undefined && y !== undefined) return toNumber(y);
+		return fn(toNumber(x), toNumber(y));
 	};
 }
 
