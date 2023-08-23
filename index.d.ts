@@ -1,3 +1,56 @@
+type EachFnObject = (key: string, value: any, obj: any) => void;
+type EachFnArray = (item: any, index: number, arr: any[]) => void;
+type EachFnType = EachFnObject & EachFnArray;
+
+/**
+ *
+ * 数组对象循环
+ * @version 1.0.0
+ * @category Public
+ * @param value 传递的数组
+ * @example
+ *
+ * ``` typescript
+ * each([1, 2, 3]) // true
+ * each('469025202308245159') // false
+ * ```
+ */
+
+type EachDataType = any[] | {
+    [k: string]: any;
+};
+declare function each$1(data: EachDataType, fn: EachFnType): any;
+
+/**
+ *
+ * 对象底层循环
+ * @version 1.0.0
+ * @category Public
+ * @param value 传递的对象
+ * @example
+ *
+ * ``` typescript
+ * objectEach({a: 1, b: 2}, (key, value, obj) => {})
+ * ```
+ */
+
+declare function objectEach$1(data: any, fn: EachFnObject): any;
+
+/**
+ *
+ * 数组底层循环
+ * @version 1.0.0
+ * @category Public
+ * @param value 传递的数组
+ * @example
+ *
+ * ``` typescript
+ * arrayEach([1, 2, 3], (item, index, arr) => {})
+ * ```
+ */
+
+declare function arrayEach$1<T = any>(data: T[], fn: EachFnArray): void;
+
 declare function computedMath$1(fn: (x: number, y: number) => number, defaultValue?: number): (x: number, y: number) => number;
 
 /**
@@ -82,9 +135,12 @@ declare const toNumber: typeof toNumber$1;
 declare const toString: typeof toString$1;
 declare const getSize: typeof getSize$1;
 declare const computedMath: typeof computedMath$1;
+declare const arrayEach: typeof arrayEach$1;
+declare const objectEach: typeof objectEach$1;
 declare const add: (x: number, y: number) => number;
 declare const subtract: (x: number, y: number) => number;
 declare const multi: (x: number, y: number) => number;
 declare const division: (x: number, y: number) => number;
+declare const each: typeof each$1;
 
-export { __AUTHOR__, __DESC__, __VERSION__, add, computedMath, division, getSize, isCard, isCharAndNum, isChinese, isEmail, isFloor, isHtmlTag, isLandline, isLoChar, isNegativeInt, isNumber, isPhone, isPhoneLoosest, isPositiveInt, isSymbol, isUpChar, multi, subtract, toNumber, toString };
+export { __AUTHOR__, __DESC__, __VERSION__, add, arrayEach, computedMath, division, each, getSize, isCard, isCharAndNum, isChinese, isEmail, isFloor, isHtmlTag, isLandline, isLoChar, isNegativeInt, isNumber, isPhone, isPhoneLoosest, isPositiveInt, isSymbol, isUpChar, multi, objectEach, subtract, toNumber, toString };
