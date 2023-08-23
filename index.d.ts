@@ -1,3 +1,63 @@
+/**
+ *
+ * 获取字符串，数组的长度
+ * @version 1.0.0
+ * @category Public
+ * @param value 传递的字符串
+ * @example
+ *
+ * ``` typescript
+ * getSize('123123')
+ * getSize('469025202308245159')
+ * ```
+ */
+declare function getSize$1(data: string | any[]): number | undefined;
+
+/**
+ *
+ * 数字转字符串
+ * @version 1.0.0
+ * @category Public
+ * @param value 传递的字符串
+ * @example
+ *
+ * ``` typescript
+ * toString(123123) //
+ * toString([1, 2, 3]) //
+ * ```
+ */
+declare function toString$1(value: string | Array<any>): string;
+
+/**
+ *
+ * 字符串转数字
+ * @version 1.0.0
+ * @category Public
+ * @param value 传递的字符串
+ * @example
+ *
+ * ``` typescript
+ * toNumber('123123') //
+ * toNumber('469025202308245159') //
+ * ```
+ */
+declare function toNumber$1(value: string | number): number;
+
+/**
+ *
+ * 是否为Symbol对象
+ * @version 1.0.0
+ * @category Public
+ * @param value 传递的字符串
+ * @example
+ *
+ * ``` typescript
+ * toNumber('123123') //
+ * toNumber('469025202308245159') //
+ * ```
+ */
+declare function isSymbol$1(value: Symbol | string): boolean;
+
 declare const __VERSION__: string;
 declare const __AUTHOR__: string;
 declare const __DESC__: string;
@@ -15,5 +75,9 @@ declare const isUpChar: (value: string) => boolean;
 declare const isPositiveInt: (value: string) => boolean;
 declare const isNegativeInt: (value: string) => boolean;
 declare const isFloor: (value: string) => boolean;
+declare const isSymbol: typeof isSymbol$1;
+declare const toNumber: typeof toNumber$1;
+declare const toString: typeof toString$1;
+declare const getSize: typeof getSize$1;
 
-export { __AUTHOR__, __DESC__, __VERSION__, isCard, isCharAndNum, isChinese, isEmail, isFloor, isHtmlTag, isLandline, isLoChar, isNegativeInt, isNumber, isPhone, isPhoneLoosest, isPositiveInt, isUpChar };
+export { __AUTHOR__, __DESC__, __VERSION__, getSize, isCard, isCharAndNum, isChinese, isEmail, isFloor, isHtmlTag, isLandline, isLoChar, isNegativeInt, isNumber, isPhone, isPhoneLoosest, isPositiveInt, isSymbol, isUpChar, toNumber, toString };

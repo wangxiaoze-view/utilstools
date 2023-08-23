@@ -1,6 +1,7 @@
 import { version, author, description } from "../package.json";
 
 import regular from "./regular/index";
+import utils from "./util";
 
 const __VERSION__ = version;
 const __AUTHOR__ = author;
@@ -21,6 +22,10 @@ const isPositiveInt = regular.isPositiveInt;
 const isNegativeInt = regular.isNegativeInt;
 const isFloor = regular.isFloor;
 
+const isSymbol = utils.isSymbol;
+const toNumber = utils.toNumber;
+const toString = utils.toString;
+const getSize = utils.getSize;
 export {
 	// 系统信息
 	__VERSION__,
@@ -42,4 +47,10 @@ export {
 	isPositiveInt,
 	isNegativeInt,
 	isFloor,
+
+	// 常用工具
+	isSymbol,
+	toNumber,
+	toString,
+	getSize,
 };
