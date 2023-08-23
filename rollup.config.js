@@ -6,6 +6,7 @@ import alias from "@rollup/plugin-alias";
 import esbuild from "rollup-plugin-esbuild";
 import typescript from "rollup-plugin-typescript2";
 import babel from "@rollup/plugin-babel";
+import { uglify } from "rollup-plugin-uglify";
 
 const entries = ["src/index.ts"];
 
@@ -23,6 +24,7 @@ const plugins = [
 	typescript(),
 	commonjs(),
 	esbuild(),
+	uglify(),
 ];
 
 export default [
@@ -34,28 +36,28 @@ export default [
 				file: input.replace("src/", "dist/").replace(".ts", ".mjs"),
 				format: "esm",
 				name: "webUtils",
-				sourcemap: true,
+				sourcemap: false,
 			},
 			{
 				// CommonJS
 				file: input.replace("src/", "dist/").replace(".ts", ".cjs"),
 				format: "cjs",
 				name: "webUtils",
-				sourcemap: true,
+				sourcemap: false,
 			},
 			{
 				// 前端和后端通用
 				file: input.replace("src/", "dist/").replace(".ts", ".umd.js"),
 				format: "umd",
 				name: "webUtils",
-				sourcemap: true,
+				sourcemap: false,
 			},
 			{
 				// 异步模块定义
 				file: input.replace("src/", "dist/").replace(".ts", ".amd.js"),
 				format: "amd",
 				name: "webUtils",
-				sourcemap: true,
+				sourcemap: false,
 			},
 		],
 		external: [],

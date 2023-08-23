@@ -14,7 +14,7 @@
 
 import { EachFnType } from "../types";
 import arrayEach from "../util/arrayEach";
-import isArray from "../util/isArray";
+import { isArray } from "../util/getTypes";
 import objectEach from "../util/objectEach";
 
 type EachDataType = any[] | { [k: string]: any };

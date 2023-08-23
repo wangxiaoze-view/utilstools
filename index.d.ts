@@ -124,8 +124,8 @@ declare function toNumber$1(value: string | number): number;
  * @example
  *
  * ``` typescript
- * toNumber('123123') //
- * toNumber('469025202308245159') //
+ * isSymbol('123123')
+ * isSymbol('469025202308245159')
  * ```
  */
 declare function isSymbol$1(value: Symbol | string): boolean;
@@ -154,10 +154,10 @@ declare const getSize: typeof getSize$1;
 declare const computedMath: typeof computedMath$1;
 declare const arrayEach: typeof arrayEach$1;
 declare const objectEach: typeof objectEach$1;
-declare const add: (x: number, y: number) => number;
-declare const subtract: (x: number, y: number) => number;
-declare const multi: (x: number, y: number) => number;
-declare const division: (x: number, y: number) => number;
+declare const add: NumberFnMath;
+declare const subtract: NumberFnMath;
+declare const multi: NumberFnMath;
+declare const division: NumberFnMath;
 declare const each: typeof each$1;
 
 export { __AUTHOR__, __DESC__, __VERSION__, add, arrayEach, computedMath, division, each, getSize, isCard, isCharAndNum, isChinese, isEmail, isFloor, isHtmlTag, isLandline, isLoChar, isNegativeInt, isNumber, isPhone, isPhoneLoosest, isPositiveInt, isSymbol, isUpChar, multi, objectEach, subtract, toNumber, toString };
