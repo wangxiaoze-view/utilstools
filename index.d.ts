@@ -25,6 +25,20 @@ declare function each$1(data: EachDataType, fn: EachFnType): any;
 
 /**
  *
+ * 过滤空白，换行字符
+ * @version 1.0.0
+ * @category Public
+ * @param value 校验的字符串
+ * @example
+ *
+ * ``` typescript
+ * trim('12312 3') // false
+ * ```
+ */
+declare function trim$1(value: string): string;
+
+/**
+ *
  * 对象底层循环
  * @version 1.0.0
  * @category Public
@@ -117,6 +131,20 @@ declare function toNumber$1(value: string | number): number;
 
 /**
  *
+ * 是否为数组格式
+ * @version 1.0.0
+ * @category Public
+ * @param value 传递的数组
+ * @example
+ *
+ * ``` typescript
+ * isArray([1, 2, 3])
+ * isArray('469025202308245159')
+ * ```
+ */
+declare function isArray$1(value: AnyType): boolean;
+/**
+ *
  * 是否为Symbol对象
  * @version 1.0.0
  * @category Public
@@ -129,6 +157,19 @@ declare function toNumber$1(value: string | number): number;
  * ```
  */
 declare function isSymbol$1(value: Symbol | string): boolean;
+/**
+ *
+ * 是否为字符串
+ * @version 1.0.0
+ * @category Public
+ * @param value 传递的字符串
+ * @example
+ *
+ * ``` typescript
+ * isString('123123')
+ * ```
+ */
+declare function isString$1(value: string): boolean;
 
 declare const __VERSION__: string;
 declare const __AUTHOR__: string;
@@ -148,6 +189,8 @@ declare const isPositiveInt: (value: string) => boolean;
 declare const isNegativeInt: (value: string) => boolean;
 declare const isFloor: (value: string) => boolean;
 declare const isSymbol: typeof isSymbol$1;
+declare const isArray: typeof isArray$1;
+declare const isString: typeof isString$1;
 declare const toNumber: typeof toNumber$1;
 declare const toString: typeof toString$1;
 declare const getSize: typeof getSize$1;
@@ -158,6 +201,7 @@ declare const add: NumberFnMath;
 declare const subtract: NumberFnMath;
 declare const multi: NumberFnMath;
 declare const division: NumberFnMath;
+declare const trim: typeof trim$1;
 declare const each: typeof each$1;
 
-export { __AUTHOR__, __DESC__, __VERSION__, add, arrayEach, computedMath, division, each, getSize, isCard, isCharAndNum, isChinese, isEmail, isFloor, isHtmlTag, isLandline, isLoChar, isNegativeInt, isNumber, isPhone, isPhoneLoosest, isPositiveInt, isSymbol, isUpChar, multi, objectEach, subtract, toNumber, toString };
+export { __AUTHOR__, __DESC__, __VERSION__, add, arrayEach, computedMath, division, each, getSize, isArray, isCard, isCharAndNum, isChinese, isEmail, isFloor, isHtmlTag, isLandline, isLoChar, isNegativeInt, isNumber, isPhone, isPhoneLoosest, isPositiveInt, isString, isSymbol, isUpChar, multi, objectEach, subtract, toNumber, toString, trim };

@@ -39,3 +39,20 @@ export function isSymbol(value: Symbol | string) {
 		(value !== null && obj_pro_toString.call(value) === "[object Symbol]")
 	);
 }
+
+
+/**
+ *
+ * 是否为字符串
+ * @version 1.0.0
+ * @category Public
+ * @param value 传递的字符串
+ * @example
+ *
+ * ``` typescript
+ * isString('123123')
+ * ```
+ */
+export function isString(value: string) {
+	return obj_pro_toString.call(value) === "[object String]";
+}

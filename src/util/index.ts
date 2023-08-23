@@ -4,11 +4,12 @@ import getSize from "./getSize";
 import computedMath from "./computedMath";
 import arrayEach from "./arrayEach";
 import objectEach from "./objectEach";
-import { isArray, isSymbol } from "./getTypes";
+import { isArray, isSymbol, isString } from "./getTypes";
 
 export default {
 	isSymbol,
 	isArray,
+	isString,
 	toNumber,
 	toString,
 	getSize,

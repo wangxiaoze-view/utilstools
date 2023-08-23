@@ -3,6 +3,7 @@ import { version, author, description } from "../package.json";
 import regular from "./regular/index";
 import utils from "./util";
 import array from "./array";
+import string from "./string";
 
 const __VERSION__ = version;
 const __AUTHOR__ = author;
@@ -24,6 +25,9 @@ const isNegativeInt = regular.isNegativeInt;
 const isFloor = regular.isFloor;
 
 const isSymbol = utils.isSymbol;
+const isArray = utils.isArray;
+const isString = utils.isString;
+
 const toNumber = utils.toNumber;
 const toString = utils.toString;
 const getSize = utils.getSize;
@@ -35,6 +39,8 @@ const add = computedMath((x: number, y: number) => x + y, 0);
 const subtract = computedMath((a: number, b: number) => a - b, 0);
 const multi = computedMath((x: number, y: number) => x * y, 0);
 const division = computedMath((x: number, y: number) => x / y, 0);
+
+const trim = string.trim;
 
 const each = array.each;
 export {
@@ -61,6 +67,8 @@ export {
 
 	// 常用工具
 	isSymbol,
+	isString,
+	isArray,
 	toNumber,
 	toString,
 	getSize,
@@ -76,4 +84,7 @@ export {
 
 	// 数组
 	each,
+
+	// 字符串
+	trim,
 };
