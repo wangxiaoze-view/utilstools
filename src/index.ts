@@ -2,6 +2,7 @@ import { version, author, description } from "../package.json";
 
 import regular from "./regular/index";
 import utils from "./util";
+import math from "./math";
 
 const __VERSION__ = version;
 const __AUTHOR__ = author;
@@ -26,6 +27,9 @@ const isSymbol = utils.isSymbol;
 const toNumber = utils.toNumber;
 const toString = utils.toString;
 const getSize = utils.getSize;
+const computedMath = utils.computedMath;
+
+const add = math.add;
 export {
 	// 系统信息
 	__VERSION__,
@@ -53,4 +57,8 @@ export {
 	toNumber,
 	toString,
 	getSize,
+	computedMath,
+
+	// 数学
+	add,
 };

@@ -1,3 +1,6 @@
+type FnParamsType = number | string | undefined | null;
+declare function computedMath$1(fn: (x: number, y: number) => number, defaultValue?: number): (x: FnParamsType, y: FnParamsType) => number;
+
 /**
  *
  * 获取字符串，数组的长度
@@ -79,5 +82,7 @@ declare const isSymbol: typeof isSymbol$1;
 declare const toNumber: typeof toNumber$1;
 declare const toString: typeof toString$1;
 declare const getSize: typeof getSize$1;
+declare const computedMath: typeof computedMath$1;
+declare const add: () => (x: string | number | null | undefined, y: string | number | null | undefined) => number;
 
-export { __AUTHOR__, __DESC__, __VERSION__, getSize, isCard, isCharAndNum, isChinese, isEmail, isFloor, isHtmlTag, isLandline, isLoChar, isNegativeInt, isNumber, isPhone, isPhoneLoosest, isPositiveInt, isSymbol, isUpChar, toNumber, toString };
+export { __AUTHOR__, __DESC__, __VERSION__, add, computedMath, getSize, isCard, isCharAndNum, isChinese, isEmail, isFloor, isHtmlTag, isLandline, isLoChar, isNegativeInt, isNumber, isPhone, isPhoneLoosest, isPositiveInt, isSymbol, isUpChar, toNumber, toString };
