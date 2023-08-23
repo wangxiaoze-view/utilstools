@@ -4,13 +4,13 @@
   "private": false,
   "description": "基础的前端库，常用的数学算法，正则校验，数组字符串等...",
   "type": "module",
-  "main": "npm/index.cjs",
-  "module": "npm/index.mjs",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
   "types": "index.d.ts",
   "sideEffects": false,
   "scripts": {
     "build": "rollup -c",
-    "dev": "resolve -c --watch",
+    "dev": "rollup -c --watch",
     "doc": "typedoc --options typedoc.json"
   },
   "repository": {
