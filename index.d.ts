@@ -1,3 +1,5 @@
+type AnyType = any;
+type NumberFnMath = (x: number, y: number) => number;
 type EachFnObject = (key: string, value: any, obj: any) => void;
 type EachFnArray = (item: any, index: number, arr: any[]) => void;
 type EachFnType = EachFnObject & EachFnArray;
@@ -34,7 +36,7 @@ declare function each$1(data: EachDataType, fn: EachFnType): any;
  * ```
  */
 
-declare function objectEach$1(data: any, fn: EachFnObject): any;
+declare function objectEach$1(data: AnyType, fn: EachFnObject): any;
 
 /**
  *
@@ -49,9 +51,23 @@ declare function objectEach$1(data: any, fn: EachFnObject): any;
  * ```
  */
 
-declare function arrayEach$1<T = any>(data: T[], fn: EachFnArray): void;
+declare function arrayEach$1(data: AnyType[], fn: EachFnArray): void;
 
-declare function computedMath$1(fn: (x: number, y: number) => number, defaultValue?: number): (x: number, y: number) => number;
+/**
+ *
+ * 俩数加减乘除的底层算法
+ * @version 1.0.0
+ * @category Public
+ * @param fn 传递的方法  defaultValue
+ * @example
+ *
+ * ``` typescript
+ * computedMath((a, b) => a + b, 0)
+ * computedMath((a, b) => a - b, 0)
+ * ```
+ */
+
+declare function computedMath$1(fn: NumberFnMath, defaultValue?: number): NumberFnMath;
 
 /**
  *
@@ -66,7 +82,8 @@ declare function computedMath$1(fn: (x: number, y: number) => number, defaultVal
  * getSize('469025202308245159')
  * ```
  */
-declare function getSize$1(data: string | any[]): number | undefined;
+
+declare function getSize$1(data: string | AnyType[]): number | undefined;
 
 /**
  *

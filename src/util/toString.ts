@@ -12,8 +12,7 @@
  * ```
  */
 
-import isSymbol from "./isSymbol.js";
-import { sym_pro_toString } from "./getTypes.js";
+import { isSymbol, sym_pro_toString } from "./getTypes.js";
 
 function toString(value: string | Array<any>): string {
 	if (typeof value === "string") return value;

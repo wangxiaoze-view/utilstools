@@ -10,9 +10,9 @@
  * objectEach({a: 1, b: 2}, (key, value, obj) => {})
  * ```
  */
-import { EachFnObject } from "../types/index.js";
+import { AnyType, EachFnObject } from "../types/index.js";
 import { obj_pro_toString } from "./getTypes.js";
-function objectEach(data: any, fn: EachFnObject) {
+function objectEach(data: AnyType, fn: EachFnObject) {
 	const type = obj_pro_toString.call(fn);
 
 	if (["[object Null]", "[object Null]"].includes(type)) return data;

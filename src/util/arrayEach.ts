@@ -10,9 +10,9 @@
  * arrayEach([1, 2, 3], (item, index, arr) => {})
  * ```
  */
-import { EachFnArray } from "../types/index.js";
+import { AnyType, EachFnArray } from "../types/index.js";
 import { obj_pro_toString } from "./getTypes.js";
-function arrayEach<T = any>(data: T[], fn: EachFnArray) {
+function arrayEach(data: AnyType[], fn: EachFnArray) {
 	const type = obj_pro_toString.call(fn);
 	let index = -1;
 	if (type === "[object Function]") {

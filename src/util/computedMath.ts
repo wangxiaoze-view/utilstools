@@ -11,12 +11,13 @@
  * computedMath((a, b) => a - b, 0)
  * ```
  */
+import { NumberFnMath } from "../types";
 import toNumber from "./toNumber";
 
 function computedMath(
-	fn: (x: number, y: number) => number,
+	fn: NumberFnMath,
 	defaultValue: number = 0
-): (x: number, y: number) => number {
+): NumberFnMath {
 	return (x: number, y: number): number => {
 		if (x === undefined && y === undefined) return defaultValue;
 		if (x !== undefined && y === undefined) return toNumber(x);
