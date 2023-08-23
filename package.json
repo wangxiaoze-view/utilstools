@@ -9,8 +9,7 @@
   "browser": "npm/umd/index.js",
   "sideEffects": false,
   "scripts": {
-    "build": "rimraf npm && rollup -c  --environment NODE_ENV:production",
-    "build:dev": "rimraf npm && rollup -c -w --environment NODE_ENV:development"
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -23,20 +22,7 @@
   },
   "homepage": "https://github.com/wangxiaoze-view/web-utils#readme",
   "dependencies": {
-    "rimraf": "^5.0.1",
-    "rollup": "^3.25.3",
-    "rollup-plugin-uglify": "^6.0.4"
+    "typescript": "^5.1.6"
   },
-  "devDependencies": {
-    "@babel/core": "^7.22.5",
-    "@rollup/plugin-babel": "^6.0.3",
-    "@rollup/plugin-beep": "^1.0.2",
-    "@rollup/plugin-commonjs": "^25.0.2",
-    "@rollup/plugin-json": "^6.0.0",
-    "@rollup/plugin-node-resolve": "^15.1.0",
-    "@rollup/plugin-run": "^3.0.1",
-    "@rollup/plugin-strip": "^3.0.2",
-    "@rollup/plugin-terser": "^0.4.3",
-    "rollup-plugin-node-externals": "^6.1.1"
-  }
+  "devDependencies": {}
 }
