@@ -15,14 +15,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wangxiaoze-view/web-utils"
+    "url": "git+https://github.com/wangxiaoze-view/utilstools"
   },
   "author": "wangxiaoze@petalmail.com",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/wangxiaoze-view/web-utils/issues"
+    "url": "https://github.com/wangxiaoze-view/utilstools/issues"
   },
-  "homepage": "https://github.com/wangxiaoze-view/web-utils#readme",
+  "homepage": "https://github.com/wangxiaoze-view/utilstools#readme",
   "devDependencies": {
     "@babel/core": "^7.22.10",
     "@rollup/plugin-alias": "^5.0.0",
