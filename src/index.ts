@@ -4,6 +4,7 @@ import regular from "./regular/index";
 import utils from "./util";
 import array from "./array";
 import string from "./string";
+import { UtilsFuncs } from "./types";
 
 const __VERSION__ = version;
 const __AUTHOR__ = author;
@@ -29,11 +30,12 @@ const isArray = utils.isArray;
 const isString = utils.isString;
 
 const toNumber = utils.toNumber;
-const toString = utils.toString;
+const toStrings = utils.toStrings;
 const getSize = utils.getSize;
 const computedMath = utils.computedMath;
 const arrayEach = utils.arrayEach;
 const objectEach = utils.objectEach;
+const toCaseFirst = utils.toCaseFirst;
 
 const add = computedMath((x: number, y: number) => x + y, 0);
 const subtract = computedMath((a: number, b: number) => a - b, 0);
@@ -41,9 +43,15 @@ const multi = computedMath((x: number, y: number) => x * y, 0);
 const division = computedMath((x: number, y: number) => x / y, 0);
 
 const trim = string.trim;
+const capitalized = string.capitalized;
+const toLowerCase = string.toLowerCase;
+const isWith = string.isWith;
+const padStart = string.padStart;
+const padEnd = string.padEnd;
 
 const each = array.each;
-export {
+
+const webUtils: UtilsFuncs = {
 	// 系统信息
 	__VERSION__,
 	__AUTHOR__,
@@ -70,11 +78,12 @@ export {
 	isString,
 	isArray,
 	toNumber,
-	toString,
+	toStrings,
 	getSize,
 	computedMath,
 	arrayEach,
 	objectEach,
+	toCaseFirst,
 
 	// 数学
 	add,
@@ -87,4 +96,11 @@ export {
 
 	// 字符串
 	trim,
+	capitalized,
+	toLowerCase,
+	isWith,
+	padStart,
+	padEnd,
 };
+
+export default webUtils;

@@ -1,19 +1,22 @@
 import toNumber from "./toNumber";
-import toString from "./toString";
+import toStrings from "./toStrings";
 import getSize from "./getSize";
 import computedMath from "./computedMath";
 import arrayEach from "./arrayEach";
 import objectEach from "./objectEach";
 import { isArray, isSymbol, isString } from "./getTypes";
+import toCaseFirst from "./toCaseFirst";
+import { IUtilsFuns } from "../types";
 
 export default {
 	isSymbol,
 	isArray,
 	isString,
 	toNumber,
-	toString,
+	toStrings,
 	getSize,
 	computedMath,
 	arrayEach,
 	objectEach,
-};
+	toCaseFirst,
+} as IUtilsFuns;

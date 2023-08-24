@@ -40,7 +40,6 @@ export function isSymbol(value: Symbol | string) {
 	);
 }
 
-
 /**
  *
  * 是否为字符串

@@ -1,3 +1,5 @@
+import { IRegularFuns } from "../types";
+
 /**
  *
  * 手机号校验，最宽松模式, 没有按照国家准展示; 只是数字展示11位
@@ -238,4 +240,4 @@ export default {
 	isPositiveInt,
 	isNegativeInt,
 	isFloor,
-};
+} as IRegularFuns;

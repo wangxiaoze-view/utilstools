@@ -33,28 +33,28 @@ export default [
 		output: [
 			{
 				// ES Modules
-				file: input.replace("src/", "dist/").replace(".ts", ".mjs"),
+				file: input.replace("src/", "dist/").replace(".ts", "-mjs.mjs"),
 				format: "esm",
 				name: "webUtils",
 				sourcemap: false,
 			},
 			{
 				// CommonJS
-				file: input.replace("src/", "dist/").replace(".ts", ".cjs"),
+				file: input.replace("src/", "dist/").replace(".ts", "-cjs.cjs"),
 				format: "cjs",
 				name: "webUtils",
 				sourcemap: false,
 			},
 			{
 				// 前端和后端通用
-				file: input.replace("src/", "dist/").replace(".ts", ".umd.js"),
+				file: input.replace("src/", "dist/").replace(".ts", "-umd.js"),
 				format: "umd",
 				name: "webUtils",
 				sourcemap: false,
 			},
 			{
 				// 异步模块定义
-				file: input.replace("src/", "dist/").replace(".ts", ".amd.js"),
+				file: input.replace("src/", "dist/").replace(".ts", "-amd.js"),
 				format: "amd",
 				name: "webUtils",
 				sourcemap: false,
