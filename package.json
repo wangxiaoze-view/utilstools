@@ -1,6 +1,6 @@
 {
   "name": "web-utils-js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": false,
   "description": "基础的前端库，常用的数学算法，正则校验，数组字符串等...",
   "type": "module",
