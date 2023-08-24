@@ -35,28 +35,28 @@ export default [
 				// ES Modules
 				file: input.replace("src/", "dist/").replace(".ts", ".mjs"),
 				format: "esm",
-				name: "utilstools",
+				name: "wxzUtils",
 				sourcemap: false,
 			},
 			{
 				// CommonJS
 				file: input.replace("src/", "dist/").replace(".ts", ".cjs"),
 				format: "cjs",
-				name: "utilstools",
+				name: "wxzUtils",
 				sourcemap: false,
 			},
 			{
 				// 前端和后端通用
 				file: input.replace("src/", "dist/").replace(".ts", ".js"),
 				format: "umd",
-				name: "utilstools",
+				name: "wxzUtils",
 				sourcemap: false,
 			},
 			{
 				// 异步模块定义
 				file: input.replace("src/", "dist/").replace(".ts", ".amd.js"),
 				format: "amd",
-				name: "utilstools",
+				name: "wxzUtils",
 				sourcemap: false,
 			},
 		],
