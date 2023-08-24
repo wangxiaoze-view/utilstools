@@ -1,11 +1,11 @@
 {
-  "name": "web-utils-js",
-  "version": "1.0.2",
+  "name": "utilstools",
+  "version": "1.1.2",
   "private": false,
-  "description": "基础的前端库，常用的数学算法，正则校验，数组字符串等...",
+  "description": "Basic front-end libraries, commonly used mathematical algorithms, regular checks, array strings, etc...",
   "type": "module",
-  "main": "dist/index-cjs.cjs",
-  "module": "dist/index-mjs.mjs",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
   "types": "index.d.ts",
   "sideEffects": false,
   "scripts": {
@@ -41,8 +41,8 @@
   },
   "exports": {
     ".": {
-      "import": "./dist/index-mjs.mjs",
-      "require": "./dist/index-cjs.cjs",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs",
       "types": "./index.d.ts"
     }
   },

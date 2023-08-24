@@ -51,7 +51,7 @@ const padEnd = string.padEnd;
 
 const each = array.each;
 
-const webUtils: UtilsFuncs = {
+const utilstools: UtilsFuncs = {
 	// 系统信息
 	__VERSION__,
 	__AUTHOR__,
@@ -103,4 +103,56 @@ const webUtils: UtilsFuncs = {
 	padEnd,
 };
 
-export default webUtils;
+export {
+	// 系统信息
+	__VERSION__,
+	__AUTHOR__,
+	__DESC__,
+
+	// 正则
+	isPhoneLoosest,
+	isPhone,
+	isEmail,
+	isLandline,
+	isCard,
+	isChinese,
+	isNumber,
+	isHtmlTag,
+	isCharAndNum,
+	isLoChar,
+	isUpChar,
+	isPositiveInt,
+	isNegativeInt,
+	isFloor,
+
+	// 常用工具
+	isSymbol,
+	isString,
+	isArray,
+	toNumber,
+	toStrings,
+	getSize,
+	computedMath,
+	arrayEach,
+	objectEach,
+	toCaseFirst,
+
+	// 数学
+	add,
+	subtract,
+	multi,
+	division,
+
+	// 数组
+	each,
+
+	// 字符串
+	trim,
+	capitalized,
+	toLowerCase,
+	isWith,
+	padStart,
+	padEnd,
+};
+
+export default utilstools;

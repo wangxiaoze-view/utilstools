@@ -10,14 +10,14 @@
 		<title>Document</title>
 	</head>
 	<body></body>
-	<script src="/dist/index.umd.js"></script>
+	<script src="/dist/index.js"></script>
 	<script>
-		console.log(webUtils);
+		console.log(utilstools);
 	</script>
 
 	<script type="module">
-		import webUtils from "/dist/index.mjs";
-		const { isPhone } = webUtils;
-		console.log(webUtils, 111, isPhone("11"));
+		import { isPhone } from "/dist/index.mjs";
+		// const { isPhone } = webUtils;
+		console.log(utilstools, 111, isPhone("11"));
 	</script>
 </html>
