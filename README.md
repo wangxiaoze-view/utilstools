@@ -43,4 +43,5 @@ console.log(add(1, 2));
 
 ---
 
-**文档还在不断进行完善**
+对于具体的使用方法可参考文档: 
+[https://utilstools-docs.wangxiaoze.wang/](https://utilstools-docs.wangxiaoze.wang/)

@@ -18,11 +18,11 @@
     "url": "git+https://github.com/wangxiaoze-view/utilstools"
   },
   "author": "wangxiaoze@petalmail.com",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/wangxiaoze-view/utilstools/issues"
   },
-  "homepage": "https://github.com/wangxiaoze-view/utilstools#readme",
+  "homepage": "https://utilstools-docs.wangxiaoze.wang/",
   "devDependencies": {
     "@babel/core": "^7.22.10",
     "@rollup/plugin-alias": "^5.0.0",

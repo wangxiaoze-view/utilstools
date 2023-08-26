@@ -22,6 +22,11 @@ export interface IStringFuns {
 	isWith(value: string, char: string, index: number): boolean;
 	padStart(value: string, length: number, char?: string | undefined): string;
 	padEnd(value: string, length: number, char?: string | undefined): string;
+	baseParseInt(value: string, radix?: number | undefined): number;
+	baseParseFloat(value: string): number;
+	repeatString(value: string, count: number): string;
+	replaceString(value: string, searchValue: string, replaceValue: string): string;
+	splitString(value: string, separator: string, limit?: number | undefined): string[];
 }
 
 export interface IRegularFuns {

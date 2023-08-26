@@ -10,6 +10,7 @@ const __VERSION__ = version;
 const __AUTHOR__ = author;
 const __DESC__ = description;
 
+// 正则
 const isPhoneLoosest = regular.isPhoneLoosest;
 const isPhone = regular.isPhone;
 const isEmail = regular.isEmail;
@@ -25,10 +26,10 @@ const isPositiveInt = regular.isPositiveInt;
 const isNegativeInt = regular.isNegativeInt;
 const isFloor = regular.isFloor;
 
+// 基础工具
 const isSymbol = utils.isSymbol;
 const isArray = utils.isArray;
 const isString = utils.isString;
-
 const toNumber = utils.toNumber;
 const toStrings = utils.toStrings;
 const getSize = utils.getSize;
@@ -37,19 +38,33 @@ const arrayEach = utils.arrayEach;
 const objectEach = utils.objectEach;
 const toCaseFirst = utils.toCaseFirst;
 
+// 数学
 const add = computedMath((x: number, y: number) => x + y, 0);
 const subtract = computedMath((a: number, b: number) => a - b, 0);
 const multi = computedMath((x: number, y: number) => x * y, 0);
 const division = computedMath((x: number, y: number) => x / y, 0);
 
+// 字符串
 const trim = string.trim;
 const capitalized = string.capitalized;
 const toLowerCase = string.toLowerCase;
 const isWith = string.isWith;
 const padStart = string.padStart;
 const padEnd = string.padEnd;
+const baseParseInt = string.baseParseInt;
+const baseParseFloat = string.baseParseFloat;
+const repeatString = string.repeatString;
+const replaceString = string.replaceString;
+const splitString = string.splitString;
 
+// 数组
 const each = array.each;
+
+
+// 对象
+
+
+// 数组
 
 const utilstools: UtilsFuncs = {
 	// 系统信息
@@ -101,6 +116,11 @@ const utilstools: UtilsFuncs = {
 	isWith,
 	padStart,
 	padEnd,
+	baseParseInt,
+	baseParseFloat,
+	repeatString,
+	replaceString,
+	splitString
 };
 
 export {
@@ -153,6 +173,11 @@ export {
 	isWith,
 	padStart,
 	padEnd,
+	baseParseInt,
+	baseParseFloat,
+	repeatString,
+	replaceString,
+	splitString
 };
 
 export default utilstools;
