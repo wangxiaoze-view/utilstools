@@ -1,16 +1,3 @@
-/**
- *
- * 俩数加减乘除的底层算法
- * @version 1.0.0
- * @category Public
- * @param fn 传递的方法  defaultValue
- * @example
- *
- * ``` typescript
- * computedMath((a, b) => a + b, 0)
- * computedMath((a, b) => a - b, 0)
- * ```
- */
 import { NumberFnMath } from "../types";
 import toNumber from "./toNumber";
 

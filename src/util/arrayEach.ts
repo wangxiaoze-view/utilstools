@@ -1,15 +1,3 @@
-/**
- *
- * 数组底层循环
- * @version 1.0.0
- * @category Public
- * @param value 传递的数组
- * @example
- *
- * ``` typescript
- * arrayEach([1, 2, 3], (item, index, arr) => {})
- * ```
- */
 import { AnyType, EachFnArray } from "../types/index.js";
 import { obj_pro_toString } from "./getTypes.js";
 function arrayEach(data: AnyType[], fn: EachFnArray) {
