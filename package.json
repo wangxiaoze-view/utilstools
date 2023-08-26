@@ -1,6 +1,6 @@
 {
   "name": "wxz-utils",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "private": false,
   "description": "Basic front-end libraries, commonly used mathematical algorithms, regular checks, array strings, etc...",
   "type": "module",
@@ -8,6 +8,12 @@
   "module": "dist/index.mjs",
   "types": "index.d.ts",
   "sideEffects": false,
+  "keywords": [
+    "wxz-utils",
+    "utils",
+    "rollup",
+    "typescript"
+  ],
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c --watch",
