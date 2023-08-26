@@ -4,6 +4,9 @@
 >
 > 当然可以再不同的设备环境中使用，可以在`node`中使用，也可以在`VUE`中使用，同时还可以在`浏览器`中使用
 
+**对于具体的使用方法可参考文档: 
+[https://utilstools-docs.wangxiaoze.wang/](https://utilstools-docs.wangxiaoze.wang/)**
+
 ## 使用方式
 
 ### 1️⃣：浏览器使用，引入 js-cdn
@@ -43,5 +46,13 @@ console.log(add(1, 2));
 
 ---
 
-对于具体的使用方法可参考文档: 
-[https://utilstools-docs.wangxiaoze.wang/](https://utilstools-docs.wangxiaoze.wang/)
+## 工具库的进度
+
+1. 正则： 已完善常用的几种;
+2. 底层工具库: 基本完善，后续会根据项目情况逐步完善;
+3. 字符串：常用的方法已完善;
+3. 数组：**仅仅只有循环**；
+4. 对象： **还未开始**；
+5. 方法函数：**还未开始**;
+
+**总体进度以文档([https://utilstools-docs.wangxiaoze.wang/](https://utilstools-docs.wangxiaoze.wang/))为准；具体使用可参考文档;**
