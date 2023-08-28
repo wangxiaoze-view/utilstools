@@ -48,6 +48,9 @@ export interface IRegularFuns {
 
 export interface IArrayFuns {
 	each(data: EachDataType, fn: EachFnType): EachFnType;
+	chunks(data: AnyType[], size: number): AnyType[][];
+	trueValue(data: AnyType): AnyType[];
+	concat(...data: AnyType[]): AnyType[];
 }
 
 export interface IUtilsFuns {

@@ -603,6 +603,52 @@ const splitString = string.splitString;
  */
 const each = array.each;
 
+/**
+ *
+ * 将数组切分为特定长度的二维数组
+ * @version 1.0.0
+ * @category Array数组
+ * @param value 传递的数组
+ * @param chunkNum 二维数组每个数组的长度
+ * @example
+ *
+ * ``` typescript
+ * chunks([1, 2, 3], 2) // [[1, 2], [3]]
+ * chunks([1, 2, 3, 4, 5], -1) // [[1], [2], [3], [4], [5]]
+ * chunks([1, 2, 3, 4, 5], 10) // [[1, 2, 3, 4, 5]]
+ * ```
+ */
+const chunks = array.chunks
+
+/**
+ *
+ * 将原有数组创建为一个新的数组，但是数组返回的是真值;
+ * @version 1.0.0
+ * @category Array数组
+ * @param value 传递的数组
+ * @param chunkNum 二维数组每个数组的长度
+ * @example
+ *
+ * ``` typescript
+ * trueValue([1, 2, 0, false, undefined, null, {}]) // [1, 2]
+ * ```
+ */
+const trueValue = array.trueValue;
+
+/**
+ *
+ * 数组合并，返回新的数组
+ * @version 1.0.0
+ * @category Array数组
+ * @param value 传递的数组
+ * @param args 传递的多个数组
+ * @example
+ *
+ * ``` typescript
+ * concat([1, 2], 1, 2, 3) // [1, 2, 1, 2, 3]
+ * ```
+ */
+const concat = array.concat;
 
 // 对象
 
@@ -648,6 +694,9 @@ const utilstools: UtilsFuncs = {
 
 	// 数组
 	each,
+	chunks,
+	trueValue,
+	concat,
 
 	// 字符串
 	trim,
@@ -705,6 +754,9 @@ export {
 
 	// 数组
 	each,
+	chunks,
+	trueValue,
+	concat,
 
 	// 字符串
 	trim,
