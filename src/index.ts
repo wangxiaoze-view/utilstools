@@ -6,7 +6,6 @@ import array from "./array";
 import string from "./string";
 import { UtilsFuncs } from "./types";
 
-
 // 没有什么特殊意义，仅仅是记录当前工具库的版本， 作者，描述等等；
 const __VERSION__ = version;
 const __AUTHOR__ = author;
@@ -372,6 +371,42 @@ const objectEach = utils.objectEach;
  */
 const toCaseFirst = utils.toCaseFirst;
 
+/**
+ *
+ * 过滤给定对象数据, 可根据对象的形式展示查询给定的值，返回新数组的值；
+ * @version 1.0.0
+ * @category Utils工具
+ * @param data 数组
+ * @param callback 查询条件或者回调函数
+ * @example
+ *
+ * ``` typescript
+ * // 用法1: 对象{a: 1, b: 2}, 查询的条件{a: 1} ===> 返回的值为对应的数组格式[1]
+ * filterObj({a: 1, b: 2}, {a: 1}) // [1]
+ * // 用法2： 对象循环
+ * filterObj({a: 1, b: 2}, (key, value, obj) => {})
+ * ```
+ */
+const filterObj = utils.filterObj;
+
+/**
+ *
+ * 过滤给定数组数据, 可根据对象的形式展示查询给定的值，返回新查询的值；
+ * @version 1.0.0
+ * @category Utils工具
+ * @param data 数组
+ * @param callback 查询条件或者回调函数
+ * @example
+ *
+ * ``` typescript
+ * // 用法1: 数组[{a: 1}, {b: 2}], 查询的条件{a: 1} ===> 返回的值为对应的对象{b: 2}
+ * filterObj([{a: 1}, {b: 2}], {b: 2}) // {b: 2}
+ * // 用法2： 数组循环
+ * filterObj([{a: 1}, {b: 2}], (item, index, array) => {})
+ * ```
+ */
+const filterArr = utils.filterArr;
+
 // 数学
 /**
  *
@@ -618,7 +653,7 @@ const each = array.each;
  * chunks([1, 2, 3, 4, 5], 10) // [[1, 2, 3, 4, 5]]
  * ```
  */
-const chunks = array.chunks
+const chunks = array.chunks;
 
 /**
  *
@@ -649,6 +684,59 @@ const trueValue = array.trueValue;
  * ```
  */
 const concat = array.concat;
+
+/**
+ *
+ * 给定一组数据，排除给定数组的值；例如：数组A:[1, 2, 3, {a: 1}, false], 我要将数组A排序数组B([{}, 2, true, false])的值;那么
+ * 数组A中不该存在数组B的任意值；
+ * @version 1.0.0
+ * @category Array数组
+ * @param value 传递的数组
+ * @param diffVal 排除的数组
+ * @example
+ *
+ * ``` typescript
+ * const a = [1, 2, 3, {a: 1}, false];
+ * const b = [{}, 2, true, false];
+ * diffFilter(a, b) // [1, 3, {a: 1}]
+ * ```
+ */
+const diffFilter = array.diffFilter;
+
+/**
+ *
+ * 根据索引删除数组值，返回一个新创建的数组
+ * @version 1.0.0
+ * @category Array数组
+ * @param value 传递的数组
+ * @param index 删除的数组索引，默认为1
+ * @example
+ *
+ * ``` typescript
+ * const a = [1, 2, 3, {a: 1}, false];
+ * drop(a, 3) // [{a: 1}, false]
+ * ```
+ */
+const drop = array.drop;
+
+/**
+ *
+ * 根据特定字符，填充数组;
+ * @version 1.0.0
+ * @category Array数组
+ * @param value 传递的数组
+ * @param char 填充的字符
+ * @param start 填充的开始位置
+ * @param end 填充的结束位置
+ * @example
+ *
+ * ``` typescript
+ * const a = [1, 2];
+ * fill(a, "***",  1, 3) // [1, '***']
+ * fill(a, "***") // ['***', '***']
+ * ```
+ */
+const fill = array.fill;
 
 // 对象
 
@@ -685,6 +773,8 @@ const utilstools: UtilsFuncs = {
 	arrayEach,
 	objectEach,
 	toCaseFirst,
+	filterObj,
+	filterArr,
 
 	// 数学
 	add,
@@ -697,6 +787,9 @@ const utilstools: UtilsFuncs = {
 	chunks,
 	trueValue,
 	concat,
+	diffFilter,
+	drop,
+	fill,
 
 	// 字符串
 	trim,
@@ -709,7 +802,7 @@ const utilstools: UtilsFuncs = {
 	baseParseFloat,
 	repeatString,
 	replaceString,
-	splitString
+	splitString,
 };
 
 export {
@@ -745,6 +838,8 @@ export {
 	arrayEach,
 	objectEach,
 	toCaseFirst,
+	filterObj,
+	filterArr,
 
 	// 数学
 	add,
@@ -757,6 +852,9 @@ export {
 	chunks,
 	trueValue,
 	concat,
+	diffFilter,
+	drop,
+	fill,
 
 	// 字符串
 	trim,
@@ -769,7 +867,7 @@ export {
 	baseParseFloat,
 	repeatString,
 	replaceString,
-	splitString
+	splitString,
 };
 
 export default utilstools;

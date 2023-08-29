@@ -7,6 +7,8 @@ import objectEach from "./objectEach";
 import { isArray, isSymbol, isString } from "./getTypes";
 import toCaseFirst from "./toCaseFirst";
 import { IUtilsFuns } from "../types";
+import filterObj from "./filterObj";
+import filterArr from "./filterArr";
 
 export default {
 	isSymbol,
@@ -19,4 +21,6 @@ export default {
 	arrayEach,
 	objectEach,
 	toCaseFirst,
+	filterObj,
+	filterArr,
 } as IUtilsFuns;

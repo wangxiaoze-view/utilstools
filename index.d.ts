@@ -5,6 +5,8 @@ type EachDataType = any[] | {
 type NumberFnMath = (x: number, y: number) => number;
 type EachFnObject = (key: string, value: any, obj: any) => void;
 type EachFnArray = (item: any, index: number, arr: any[]) => void;
+type EachFnObjectAny = (key: string, value: any, obj: any) => any;
+type EachFnArrayAny = (item: any, index: number, arr: any[]) => any;
 type EachFnType = EachFnObject & EachFnArray;
 type StringFn = (...args: any[]) => string;
 type StringCase = "toUpperCase" | "toLowerCase";
@@ -37,11 +39,14 @@ interface IRegularFuns {
     isNegativeInt(value: string): boolean;
     isFloor(value: string): boolean;
 }
-interface IArrayFuns {
+interface IArrayFuns<T = AnyType> {
     each(data: EachDataType, fn: EachFnType): EachFnType;
-    chunks(data: AnyType[], size: number): AnyType[][];
-    trueValue(data: AnyType): AnyType[];
-    concat(...data: AnyType[]): AnyType[];
+    chunks(data: T[], size: number): T[][];
+    trueValue(data: T): T[];
+    concat(...data: T[]): T[];
+    diffFilter(data: T[], diffVal: T): T[];
+    drop(data: T[], index: number): T[];
+    fill(data: never, char?: never, start?: number, end?: number): never[];
 }
 interface IUtilsFuns {
     isSymbol(value: Symbol | string): boolean;
@@ -54,6 +59,8 @@ interface IUtilsFuns {
     arrayEach(data: AnyType[], fn: EachFnArray): void;
     objectEach(data: AnyType, fn: EachFnObject): void;
     toCaseFirst(type: StringCase): StringFn;
+    filterObj(data: AnyType, fn: EachFnObjectAny): any;
+    filterArr(data: AnyType, fn: EachFnArrayAny): any;
 }
 interface IMathFuns {
     add: NumberFnMath;
@@ -412,6 +419,40 @@ declare const objectEach: (data: any, fn: EachFnObject) => void;
 declare const toCaseFirst: (type: StringCase) => StringFn;
 /**
  *
+ * 过滤给定对象数据, 可根据对象的形式展示查询给定的值，返回新数组的值；
+ * @version 1.0.0
+ * @category Utils工具
+ * @param data 数组
+ * @param callback 查询条件或者回调函数
+ * @example
+ *
+ * ``` typescript
+ * // 用法1: 对象{a: 1, b: 2}, 查询的条件{a: 1} ===> 返回的值为对应的数组格式[1]
+ * filterObj({a: 1, b: 2}, {a: 1}) // [1]
+ * // 用法2： 对象循环
+ * filterObj({a: 1, b: 2}, (key, value, obj) => {})
+ * ```
+ */
+declare const filterObj: (data: any, fn: EachFnObjectAny) => any;
+/**
+ *
+ * 过滤给定数组数据, 可根据对象的形式展示查询给定的值，返回新查询的值；
+ * @version 1.0.0
+ * @category Utils工具
+ * @param data 数组
+ * @param callback 查询条件或者回调函数
+ * @example
+ *
+ * ``` typescript
+ * // 用法1: 数组[{a: 1}, {b: 2}], 查询的条件{a: 1} ===> 返回的值为对应的对象{b: 2}
+ * filterObj([{a: 1}, {b: 2}], {b: 2}) // {b: 2}
+ * // 用法2： 数组循环
+ * filterObj([{a: 1}, {b: 2}], (item, index, array) => {})
+ * ```
+ */
+declare const filterArr: (data: any, fn: EachFnArrayAny) => any;
+/**
+ *
  * 数学算法：俩数字相加,类似于数学算法： a + b = c; 该方法存在计算精度丢失问题;
  * @version 1.0.0
  * @category Math数学
@@ -676,6 +717,56 @@ declare const trueValue: (data: any) => any[];
  * ```
  */
 declare const concat: (...data: any[]) => any[];
+/**
+ *
+ * 给定一组数据，排除给定数组的值；例如：数组A:[1, 2, 3, {a: 1}, false], 我要将数组A排序数组B([{}, 2, true, false])的值;那么
+ * 数组A中不该存在数组B的任意值；
+ * @version 1.0.0
+ * @category Array数组
+ * @param value 传递的数组
+ * @param diffVal 排除的数组
+ * @example
+ *
+ * ``` typescript
+ * const a = [1, 2, 3, {a: 1}, false];
+ * const b = [{}, 2, true, false];
+ * diffFilter(a, b) // [1, 3, {a: 1}]
+ * ```
+ */
+declare const diffFilter: (data: any[], diffVal: any) => any[];
+/**
+ *
+ * 根据索引删除数组值，返回一个新创建的数组
+ * @version 1.0.0
+ * @category Array数组
+ * @param value 传递的数组
+ * @param index 删除的数组索引，默认为1
+ * @example
+ *
+ * ``` typescript
+ * const a = [1, 2, 3, {a: 1}, false];
+ * drop(a, 3) // [{a: 1}, false]
+ * ```
+ */
+declare const drop: (data: any[], index: number) => any[];
+/**
+ *
+ * 根据特定字符，填充数组;
+ * @version 1.0.0
+ * @category Array数组
+ * @param value 传递的数组
+ * @param char 填充的字符
+ * @param start 填充的开始位置
+ * @param end 填充的结束位置
+ * @example
+ *
+ * ``` typescript
+ * const a = [1, 2];
+ * fill(a, "***",  1, 3) // [1, '***']
+ * fill(a, "***") // ['***', '***']
+ * ```
+ */
+declare const fill: (data: never, char?: undefined, start?: number | undefined, end?: number | undefined) => never[];
 declare const utilstools: UtilsFuncs;
 
-export { __AUTHOR__, __DESC__, __VERSION__, add, arrayEach, baseParseFloat, baseParseInt, capitalized, chunks, computedMath, concat, utilstools as default, division, each, getSize, isArray, isCard, isCharAndNum, isChinese, isEmail, isFloor, isHtmlTag, isLandline, isLoChar, isNegativeInt, isNumber, isPhone, isPhoneLoosest, isPositiveInt, isString, isSymbol, isUpChar, isWith, multi, objectEach, padEnd, padStart, repeatString, replaceString, splitString, subtract, toCaseFirst, toLowerCase, toNumber, toStrings, trim, trueValue };
+export { __AUTHOR__, __DESC__, __VERSION__, add, arrayEach, baseParseFloat, baseParseInt, capitalized, chunks, computedMath, concat, utilstools as default, diffFilter, division, drop, each, fill, filterArr, filterObj, getSize, isArray, isCard, isCharAndNum, isChinese, isEmail, isFloor, isHtmlTag, isLandline, isLoChar, isNegativeInt, isNumber, isPhone, isPhoneLoosest, isPositiveInt, isString, isSymbol, isUpChar, isWith, multi, objectEach, padEnd, padStart, repeatString, replaceString, splitString, subtract, toCaseFirst, toLowerCase, toNumber, toStrings, trim, trueValue };

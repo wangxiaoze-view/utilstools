@@ -16,6 +16,8 @@
 <p>在个人项目中为了一部分代码避免重复造轮子使用， 于是花点时间打造一款属于个人的前端底层库; 对了底层库使用<code>TS</code>在合适不过了;</p>
 <p>当然可以再不同的设备环境中使用，可以在<code>node</code>中使用，也可以在<code>VUE</code>中使用，同时还可以在<code>浏览器</code>中使用</p>
 </blockquote>
+<p><strong>对于具体的使用方法可参考文档: 
+<a href="https://utilstools-docs.wangxiaoze.wang/">https://utilstools-docs.wangxiaoze.wang/</a></strong></p>
 <a id="md:使用方式" class="tsd-anchor"></a><h2><a href="#md:使用方式">使用方式</a></h2><a id="md:1️⃣：浏览器使用，引入-js-cdn" class="tsd-anchor"></a><h3><a href="#md:1️⃣：浏览器使用，引入-js-cdn">1️⃣：浏览器使用，引入 js-cdn</a></h3><p>默认引入： <code>https://cdn.jsdelivr.net/npm/wxz-utils/dist/index.js</code>
 支持版本引入：<code>https://cdn.jsdelivr.net/npm/wxz-utils/dist/index.js@1.0.0</code></p>
 <p>浏览器<code>&lt;script&gt;</code>中这样使用：</p>
@@ -27,8 +29,15 @@
 <a id="md:3️⃣：vue-中使用" class="tsd-anchor"></a><h3><a href="#md:3️⃣：vue-中使用">3️⃣：VUE 中使用</a></h3><pre><code class="language-js"><span class="hl-6">import</span><span class="hl-2"> { </span><span class="hl-1">add</span><span class="hl-2"> } </span><span class="hl-6">from</span><span class="hl-2"> </span><span class="hl-4">&quot;wxz-utils&quot;</span><span class="hl-2">;</span><br/><span class="hl-1">console</span><span class="hl-2">.</span><span class="hl-3">log</span><span class="hl-2">(</span><span class="hl-3">add</span><span class="hl-2">(</span><span class="hl-5">1</span><span class="hl-2">, </span><span class="hl-5">2</span><span class="hl-2">));</span>
 </code><button>Copy</button></pre>
 <hr>
-<p>对于具体的使用方法可参考文档: 
-<a href="https://utilstools-docs.wangxiaoze.wang/">https://utilstools-docs.wangxiaoze.wang/</a></p>
+<a id="md:工具库的进度" class="tsd-anchor"></a><h2><a href="#md:工具库的进度">工具库的进度</a></h2><ol>
+<li>正则： 已完善常用的几种;</li>
+<li>底层工具库: 基本完善，后续会根据项目情况逐步完善;</li>
+<li>字符串：常用的方法已完善;</li>
+<li>数组：<strong>仅仅只有循环</strong>；</li>
+<li>对象： <strong>还未开始</strong>；</li>
+<li>方法函数：<strong>还未开始</strong>;</li>
+</ol>
+<p><strong>总体进度以文档(<a href="https://utilstools-docs.wangxiaoze.wang/">https://utilstools-docs.wangxiaoze.wang/</a>)为准；具体使用可参考文档;</strong></p>
 </div></div>
 <div class="col-sidebar">
 <div class="page-menu">
@@ -59,7 +68,8 @@
 <ul>
 <li><a href="#md:1️⃣：浏览器使用，引入-js-cdn"><span>1️⃣：浏览器使用，引入 js-<wbr/>cdn</span></a></li>
 <li><a href="#md:2️⃣：node-中使用"><span>2️⃣：node 中使用</span></a></li>
-<li><a href="#md:3️⃣：vue-中使用"><span>3️⃣：VUE 中使用</span></a></li></ul></li></ul></li></ul></li></ul></div></details></div>
+<li><a href="#md:3️⃣：vue-中使用"><span>3️⃣：VUE 中使用</span></a></li></ul></li>
+<li><a href="#md:工具库的进度"><span>工具库的进度</span></a></li></ul></li></ul></li></ul></div></details></div>
 <div class="site-menu">
 <nav class="tsd-navigation"><a href="modules.html" class="current"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><g id="icon-4"><rect fill="var(--color-icon-background)" stroke="var(--color-ts-namespace)" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="6"></rect><path d="M9.33 16V7.24H10.77L13.446 14.74C13.43 14.54 13.41 14.296 13.386 14.008C13.37 13.712 13.354 13.404 13.338 13.084C13.33 12.756 13.326 12.448 13.326 12.16V7.24H14.37V16H12.93L10.266 8.5C10.282 8.692 10.298 8.936 10.314 9.232C10.33 9.52 10.342 9.828 10.35 10.156C10.366 10.476 10.374 10.784 10.374 11.08V16H9.33Z" fill="var(--color-text)"></path></g></svg><span>wxz-<wbr/>utils</span></a>
 <ul class="tsd-small-nested-navigation">
@@ -72,9 +82,16 @@
 <li><a href="functions/baseParseFloat.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-64"></use></svg><span>base<wbr/>Parse<wbr/>Float</span></a></li>
 <li><a href="functions/baseParseInt.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-64"></use></svg><span>base<wbr/>Parse<wbr/>Int</span></a></li>
 <li><a href="functions/capitalized.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-64"></use></svg><span>capitalized</span></a></li>
+<li><a href="functions/chunks.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-64"></use></svg><span>chunks</span></a></li>
 <li><a href="functions/computedMath.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-64"></use></svg><span>computed<wbr/>Math</span></a></li>
+<li><a href="functions/concat.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-64"></use></svg><span>concat</span></a></li>
+<li><a href="functions/diffFilter.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-64"></use></svg><span>diff<wbr/>Filter</span></a></li>
 <li><a href="functions/division.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-64"></use></svg><span>division</span></a></li>
+<li><a href="functions/drop.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-64"></use></svg><span>drop</span></a></li>
 <li><a href="functions/each.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-64"></use></svg><span>each</span></a></li>
+<li><a href="functions/fill.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-64"></use></svg><span>fill</span></a></li>
+<li><a href="functions/filterArr.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-64"></use></svg><span>filter<wbr/>Arr</span></a></li>
+<li><a href="functions/filterObj.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-64"></use></svg><span>filter<wbr/>Obj</span></a></li>
 <li><a href="functions/getSize.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-64"></use></svg><span>get<wbr/>Size</span></a></li>
 <li><a href="functions/isArray.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-64"></use></svg><span>is<wbr/>Array</span></a></li>
 <li><a href="functions/isCard.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-64"></use></svg><span>is<wbr/>Card</span></a></li>
@@ -106,7 +123,8 @@
 <li><a href="functions/toLowerCase.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-64"></use></svg><span>to<wbr/>Lower<wbr/>Case</span></a></li>
 <li><a href="functions/toNumber.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-64"></use></svg><span>to<wbr/>Number</span></a></li>
 <li><a href="functions/toStrings.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-64"></use></svg><span>to<wbr/>Strings</span></a></li>
-<li><a href="functions/trim.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-64"></use></svg><span>trim</span></a></li></ul></nav></div></div></div>
+<li><a href="functions/trim.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-64"></use></svg><span>trim</span></a></li>
+<li><a href="functions/trueValue.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-64"></use></svg><span>true<wbr/>Value</span></a></li></ul></nav></div></div></div>
 <div class="tsd-generator">
 <p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></div>
 <div class="overlay"></div></body></html>
